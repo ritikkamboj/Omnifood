@@ -27,13 +27,38 @@ html {
   align-items: center;
   gap: 9.6rem;
 }
-.primary-heading {
-  font-size: 5.2rem;
+.primary-heading,
+.secondary-heading,
+.tertiary-heading {
   font-weight: 700;
   color: #333;
   line-height: 1.05;
+}
+
+.primary-heading {
+  font-size: 5.2rem;
   letter-spacing: -0.5px;
   margin-bottom: 3.2rem;
+}
+.secondary-heading {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+.tertiary-heading {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+.subheading {
+  display: block;
+  /* background-color: yellow; */
+  font-size: 2rem;
+  font-weight: 500;
+  color: #e67e22;
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
 }
 .hero-description {
   font-size: 2rem;
@@ -168,23 +193,28 @@ html {
 
 /********************************/
 .section-how {
-  background-color: red;
+  /* background-color: red; */
   /* padding: 0 30px; */
   /* padding: 0 9.6rem; */
   padding: 9.6rem 0;
   margin-bottom: 2rem;
 }
-.section-how div {
+/* .section-how div {
   padding: 40px;
   font-size: 20px;
-}
+} */
 .grid {
   display: grid;
-  gap: 3rem;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+  /* justify-content: center; */
+}
+.grid--center-v {
+  align-items: center;
 }
 .container {
   max-width: 120rem;
-  /* padding: 0 3.2rem; */
+  padding: 0 3.2rem;
   margin: 0 auto;
 }
 .grid--2-cols {
@@ -194,20 +224,42 @@ html {
 .grid--3-cols {
   grid-template-columns: repeat(3, 1fr);
 }
-
-.section-how div div:nth-child(1) {
-  background-color: yellow;
-}
-.section-how div div:nth-child(2) {
-  background-color: blue;
-}
-.section-how div div:nth-child(3) {
-  background-color: green;
-}
-.section-how div div:nth-child(4) {
-  background-color: aqua;
-}
+/* 
+.section-how div div {
+  background-color: #333;
+  padding: 100px;
+  font-size: 50px;
+} */
 /* 
 .section-how:nth-child(all) {
   padding: 3rem;
+} */
+
+.step-img-box {
+  /* position: relative; */
+}
+.step-img {
+  /* position: absolute; */
+  /* top: 50px; */
+  width: 35%; /* it means it taking the 50% of the parent */
+}
+.step-number {
+  font-size: 8.4rem;
+  color: #eee;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  /* justify-self: center; */
+}
+.step-description {
+  font-size: 2rem;
+  line-height: 2;
+}
+.step-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .flex {
+  display: flex;
+  flex-direction: column;
 } */
