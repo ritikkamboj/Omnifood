@@ -68,19 +68,48 @@ html {
 .food-image {
   width: 100%;
 }
+.btn,
 .btn:link,
 .btn:visited {
-  color: #fff;
+  color: inherit;
   display: inline-block;
   font-size: 2rem;
   /* height: 20px; */
   padding: 1.6rem 3.2rem;
   text-decoration: none;
-
+border: none;
+cursor: pointer;
+/* color: ; */
+font-family: inherit;
   font-weight: 600;
   /* border-radius: 150px; */
   border-radius: 9px;
   transition: all 0.3s;
+}
+*:focus{
+  outline: none;
+
+  /* outline: 2px dotted yellow; */
+  /* outline-offset: 4px; */
+  /* in above way its not woek on rounded corners elements  , so trick we use is box-shadow*/
+  /* box-shadow: 0 0 0 0.8rem rgba(28, 80%, 52%, 0.5); */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
+.cta *:focus{
+  box-shadow: 0 0 0 0.8rem rgba(250, 229, 211, 0.5);
+}
+.btn-form
+{
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+.btn-form:hover{
+  background-color: #fff ;
+  color: #555;
+
 }
 
 .btn--full:link,
@@ -167,6 +196,7 @@ html {
 }
 .omnifood-logo {
   height: 2.2rem;
+  /* margin-bottom: 4rem; */
 }
 .main-nav-list {
   list-style: none;
@@ -253,6 +283,14 @@ html {
 }
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
+}
+.grid--5-cols
+{
+  grid-template-columns: repeat(5,1fr);
+}
+.grid--footer
+{
+  grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
 }
 /* 
 .section-how div div {
@@ -590,7 +628,7 @@ strong {
   line-height: 1.8;
 }
 .section-cta {
-  padding: 9.6rem 0;
+  padding: 4.8rem 0 12.8rem 0;
 }
 .cta {
   display: grid;
@@ -599,7 +637,7 @@ strong {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
    border-radius: 11px;
 
-  height: 50rem ;
+  /* height: 50rem ; */
   background-image: linear-gradient(to right bottom , #eb984e , #e67e22);
   overflow: hidden;
 
@@ -607,12 +645,13 @@ strong {
 .cta-text-box
 {
   color: #45260a;
-  padding: 6.4rem;
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
   
 }
 .cta-text{
   line-height: 1.8;
   font-size: 1.8rem;
+  margin-bottom: 4.8rem;
 }
 .cta-text-box .secondary-heading{
   color: #45260a;
@@ -623,4 +662,116 @@ strong {
   background-image: linear-gradient(to right bottom , hsla(28, 80%, 61%, 0.3) , hsla(28, 80%, 52%, 0.3)),url(/img/eating.jpg);
   background-size: cover;
   background-position: center;
+}
+
+.cta-form 
+{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap:3.2rem ;
+  row-gap: 2.4rem;
+}
+
+.cta-form label{
+  font-size: 1.6rem ;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 1.2rem;
+
+
+}
+
+.cta-form input,
+.cta-form select{
+width: 100%;
+padding: 1.2rem;
+/* border-radius: 12px; */
+font-size: 1.8rem;
+font-family: inherit;
+/* color: inherit; */
+color: #45260a;
+border-radius: 9px;
+border: none;
+background-color: #fdf2e9;
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder{
+
+color: #aaa;
+}
+
+.footer
+{
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+.footer-heading
+{
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+.footer-nav
+{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.footer-link:link,
+.footer-link:visited
+{
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #777;
+  transition: all 0.3s;
+
+}
+.footer-link:hover,
+.footer-link:active{
+
+  color: #555;
+}
+
+.social-links
+{
+  list-style: none;
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 2.4rem;
+}
+.footer-logo
+{
+  display: block;
+  margin-bottom: 3.2rem;
+}
+.social-icon
+{
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.copyright
+{
+  font-size: 1.6rem;
+  color: #767676;
+  line-height: 1.6;
+  margin-top: auto;
+}
+
+.logo-col
+{
+  display: flex;
+  flex-direction: column;
+}
+.contacts
+{
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.address
+{
+  margin-bottom: 2.4rem;
 }
