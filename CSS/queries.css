@@ -97,9 +97,10 @@
     }
     .btn-mobile-nav {
       display: block;
+      z-index: 100;
     }
     .main-nav {
-      background-color: rgba(0, 0, 255, 0.906);
+      background-color: rgba(255, 0255, 255, 0.97);
       position: absolute;
       top: 0;
       left: 0;
@@ -183,7 +184,10 @@
       grid-column: span 2;
       margin-bottom: 3.2rem;
     }
-    .logo-col,
+    .logo-col{
+        grid-row: 2;
+        grid-column: span 3;
+    }
     .address-col {
       grid-row: 2;
       grid-column: span 3;
